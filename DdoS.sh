@@ -76,7 +76,9 @@ echo "waiting..."
 sleep 3
 echo "try to starting hammering..."
 sleep 5
-python DdoS.py -s $xinen -p $xintext -t $xingex
+python modular.py -s $xinen -p $xintext -t $xingex
+echo "if failed u must install tools first
+exit
 fi
 
 if [ $no = '3' ]

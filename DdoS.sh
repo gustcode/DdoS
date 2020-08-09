@@ -41,7 +41,6 @@ echo $cy"1.install tools
          
          
          if you want to using DdoS first u must install tools
-         after you install tools u must CMD:python DdoS.py -s (paste IP target) -p 80 -t 135
          Disclaimer!!! Your IP is visible
          by Mr-arx
 

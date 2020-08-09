@@ -77,7 +77,7 @@ sleep 3
 echo "try to starting hammering..."
 sleep 5
 python modular.py -s $xinen -p $xintext -t $xingex
-echo "if failed u must install tools first
+echo "if failed u must install tools first"
 exit
 fi
 

